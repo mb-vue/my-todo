@@ -9,7 +9,11 @@
   
   />
   <button @click="message=clearMessage()">Clear</button>
-  <h5 class="border-grey" v-show="message.length">{{ message }}</h5>
+  <!-- <h5 class="border-grey" v-show="message.length">{{ message }}</h5> -->
+  <!-- use v-if instead v-show-->
+  <h5 class="border-grey" v-if="message.length">{{ message }}</h5>
+  <!-- cnt cmd space to insert emoji-->
+  <h3 v-else>No message entered 😎</h3>
 
 
   </v-container>
