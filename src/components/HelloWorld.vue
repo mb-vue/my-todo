@@ -3,6 +3,7 @@
   <v-container padding>
   <!-- Remove old code -->
   <input v-model="message"/>
+  <button @click="message=''">Clear</button>
   <h5>{{ message }}</h5>
 
 
