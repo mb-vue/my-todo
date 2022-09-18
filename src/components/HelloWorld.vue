@@ -2,6 +2,7 @@
 <template>
   <v-container padding>
   <!-- Remove old code -->
+  <input v-model="message"/>
   <h5>{{ message }}</h5>
 
 
