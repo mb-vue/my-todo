@@ -5,10 +5,11 @@
   <input v-model="message"
   @keyup.esc="clearMessage()"
   @keyup.enter="alertMessage()"
+ 
   
   />
   <button @click="message=clearMessage()">Clear</button>
-  <h5>{{ message }}</h5>
+  <h5 class="border-grey" v-show="message.length">{{ message }}</h5>
 
 
   </v-container>
@@ -44,7 +45,9 @@
 <!-- Add style here -->
 
 <style>
-
+  .border-grey {
+    border: 2px solid grey;
+  }
 </style>
 
 
