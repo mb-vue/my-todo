@@ -3,7 +3,7 @@
   <v-container padding>
   <!-- Remove old code -->
   <input v-model="message"/>
-  <button @click="message=''">Clear</button>
+  <button @click="message=clearMessage()">Clear</button>
   <h5>{{ message }}</h5>
 
 
@@ -20,6 +20,11 @@
     data() {
       return {
         message: 'I love Jackie'
+      }
+    },
+    methods: {
+      clearMessage() {
+        this.message=''
       }
     }
   }
