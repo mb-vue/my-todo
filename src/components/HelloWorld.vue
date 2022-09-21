@@ -22,7 +22,9 @@
   <!-- cnt cmd space to insert emoji-->
   <h3 v-else>No message entered 😎</h3>
   <hr>
-  <p>Uppercase message: {{ messageUppercase() }}</p>
+  <!-- change for compted property by remove () -->
+  <!--<p>Uppercase message: {{ messageUppercase() }}</p> -->
+  <p>Uppercase message: {{ messageUppercase }}</p>
 
 
 
@@ -42,6 +44,13 @@
         message: 'I love Jackie',
         counter:0
       }
+      // add computed property to message to confine message so that console log works only on message
+    },
+    computed: {
+       messageUppercase() {
+        console.log("This message is firing everytime I click button");
+        return this.message.toUpperCase()
+      }
     },
     methods: {
       clearMessage() {
@@ -50,10 +59,10 @@
       alertMessage() {
         alert(this.message)
       },
-      messageUppercase() {
+     /*  messageUppercase() {
         console.log("This message is firing everytime I click button");
         return this.message.toUpperCase()
-      }
+      } */
 
      
       }
